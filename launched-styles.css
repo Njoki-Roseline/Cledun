@@ -106,6 +106,149 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Mobile-First Responsive Styles */
+@media (max-width: 480px) {
+    .poster {
+        padding: 8px;
+    }
+    
+    .project-info h1 {
+        font-size: 1.5rem;
+        margin: 8px 0 4px;
+    }
+    
+    .tagline {
+        font-size: 0.9rem;
+        margin: 4px 0 8px;
+    }
+    .pricing-options {
+        flex-direction: column;
+        gap: 8px;
+        margin: 10px 0;
+    }
+    
+    .pricing-options span {
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 0.95rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .early-bird {
+        font-size: 0.95rem !important;
+        padding: 12px 10px !important;
+        margin: 5px 0 !important;
+        display: flex !important;
+        justify-content: center;
+    }
+    
+    .property {
+        margin-bottom: 15px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .property-title {
+        font-size: 1rem;
+        margin-bottom: 6px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+    
+    .property-features {
+        margin: 6px 0;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+    
+    .property-features span {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        margin: 2px;
+        flex: 1 0 calc(50% - 10px);
+        text-align: center;
+        box-sizing: border-box;
+        color: #3498db; /* Bright blue color */
+        font-weight: 600; /* Semi-bold */
+        text-shadow: 0 0 2px rgba(0,0,0,0.3); /* Subtle shadow for better contrast */
+    }
+    
+    .property-overlay {
+        padding: 10px 8px;
+        background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 50%, transparent 100%) !important;
+    }
+    
+    .sold-badge-card {
+        font-size: 0.75rem;
+        padding: 4px 25px;
+        right: -32px;
+    }
+    
+    .features-highlight {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 0 5px;
+        margin: 10px 0;
+    }
+    
+    .features-highlight span {
+        font-size: 0.72rem;
+        padding: 8px 4px;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .features-highlight .launch-status,
+    .features-highlight .sold-badge {
+        grid-column: 1 / -1;
+        padding: 10px 5px !important;
+        margin: 2px 0 !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .contact-info span {
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+    
+    .site-visit {
+        padding: 12px 20px;
+        font-size: 1rem;
+        margin: 10px auto;
+        width: 90%;
+        text-align: center;
+        display: block;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+    .properties-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .property-title {
+        font-size: 1.1rem;
+    }
+    
+    .property-features span {
+        font-size: 0.75rem;
+        padding: 4px 6px;
+    }
+}
+
 /* Base badge style */
 .sold-badge-card {
     position: absolute;
@@ -166,15 +309,20 @@
 }
 
 .property-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
     padding: 15px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     color: #fff;
     transform: translateY(0);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(2px);
 }
 
 .property:hover .property-overlay {
@@ -201,9 +349,11 @@
 }
 
 .property-location {
-    font-size: 0.9rem;
-    color: #e0e0e0;
+    font-size: 1rem;
+    font-weight: 600;
     margin-top: 8px;
+    color: #2980b9; /* Slightly darker blue */
+    text-shadow: 0 0 2px rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     gap: 5px;
