@@ -28,6 +28,7 @@
     </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="launched-styles.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -51,10 +52,13 @@
                 <span><i class="fas fa-check-circle"></i> Beaconed Plots</span>
                 <span><i class="fas fa-check-circle"></i> Water & Electricity Connected</span>
                 <span class="sold-badge"><i class="fas fa-star"></i> JUST LAUNCHED</span>
+                <a href="https://wa.me/2540769050788" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </header>
 
-        <div class="properties-grid">
+        <div class="properties-grid" id="properties-grid">
             <!-- Property 1 - Neema Garden Phase 5 -->
             <div class="property">
                 <div class="sold-badge-card new-badge">NEW</div>
@@ -97,7 +101,35 @@
                 </div>
             </div>
 
-            <!-- Property 5 -->
+            <!-- Property 5 - Aerial View 1 -->
+            <div class="property">
+                <div class="sold-badge-card new-badge">AERIAL</div>
+                <img src="DJI_0371.jpg" alt="Aerial View of Neema Garden Phase 5">
+                <div class="property-overlay">
+                    <div class="property-features">
+                        <span><i class="fas fa-map-marked-alt"></i> Strategic Location</span>
+                        <span><i class="fas fa-road"></i> Well-Planned Roads</span>
+                        <span><i class="fas fa-expand"></i> Spacious Layout</span>
+                    </div>
+                    <div class="property-location">Neema Garden Phase 5 - Aerial View</div>
+                </div>
+            </div>
+
+            <!-- Property 6 - Aerial View 2 -->
+            <div class="property">
+                <div class="sold-badge-card new-badge">AERIAL</div>
+                <img src="DJI_0403.jpg" alt="Aerial Overview of Neema Garden Phase 5">
+                <div class="property-overlay">
+                    <div class="property-features">
+                        <span><i class="fas fa-mountain"></i> Scenic Views</span>
+                        <span><i class="fas fa-sun"></i> Optimal Sunlight</span>
+                        <span><i class="fas fa-tree"></i> Green Environment</span>
+                    </div>
+                    <div class="property-location">Neema Garden Phase 5 - Panoramic View</div>
+                </div>
+            </div>
+
+            <!-- Property 7 - Commercial Plot -->
             <div class="property">
                 <div class="sold-badge-card new-badge">NEW</div>
                 <img src="c5.jpeg" alt="Commercial Plot">
@@ -111,7 +143,7 @@
                 </div>
             </div>
 
-            <!-- Property 5 -->
+            <!-- Property 8 - Beautiful Home -->
             <div class="property">
                 <div class="sold-badge-card new-badge">NEW</div>
                 <img src="hse.jpeg" alt="Beautiful Home">
@@ -141,21 +173,60 @@
         </div>
 
         <footer class="footer">
-            <div class="site-visit">
-                <i class="fas fa-calendar-alt"></i> Free Site Visits Every Wednesday & Saturday
+            <div class="footer-wave">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#ffffff"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#ffffff"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#ffffff"></path>
+                </svg>
             </div>
-            <div class="contact-info">
-                <span><i class="fas fa-phone"></i> Call Rose: 0769 050 788</span>
-                <span><i class="fas fa-envelope"></i> info@cledunrealtors.com</span>
-                <span><i class="fas fa-map-marker-alt"></i> Neema Garden Phase 5, 6 mins from Makutano ya Mwea</span>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="CLEDUN-logo-white-01.png" alt="Cledun Realtors" class="footer-logo-img">
+                        <p class="footer-tagline">Your trusted partner in real estate investments</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/2540769050788" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+<div class="footer-section">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Neema Garden Phase 5, 6 mins from Makutano ya Mwea</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+254769050788">+254 769 050 788</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@cledunrealtors.com">info@cledunrealtors.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-heading">Site Visits</h3>
+                    <div class="site-visit">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>Free Site Visits<br>Every Wednesday & Saturday</p>
+                    </div>
+                    <a href="https://wa.me/254769050788?text=Hello%20Rose,%20I'd%20like%20to%20schedule%20a%20site%20visit%20for%20Neema%20Garden%20Phase%205.%20Please%20let%20me%20know%20available%20dates%20and%20times." class="cta-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Schedule a Visit
+                    </a>
+                </div>
             </div>
-            <div class="copyright">
-                &copy; 2025 Njoki Rose Lynn. All Rights Reserved.
-            </div>
-            <div class="no-print" style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: #fff; opacity: 0.9;">
-                <p>For bookings and inquiries, call Rose today to schedule your visit!</p>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 Cledun Realtors. All Rights Reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </footer>
     </div>
+    <script src="animations.js"></script>
 </body>
 </html>
